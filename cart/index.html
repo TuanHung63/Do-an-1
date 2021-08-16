@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BK Shop</title>
+    <link rel="stylesheet" href="./style.css">
+    <!--BS4-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--Nav-->
+    <div class="container "></div>
+    <nav class="navbar navbar-expand-lg navbar-light  " style="background-color: rgb(255, 214, 214);">
+        <a class="navbar-brand ml-3" href="#"><img src="../images/logo1.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end mr-3 text-center " id="navbarNav">
+            <ul class="navbar-nav  ">
+              <li class="nav-item  ">
+                <a class="nav-link" href="../home/index.html">Trang chủ </a>
+              </li>
+              <li class="nav-item  ">
+                <a class="nav-link" href="../product/index.html">Sản phẩm</a>
+              </li>
+              <li class="nav-item active ">
+                <a class="nav-link" href="#">Giỏ hàng</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#contact">Liên hệ</a>
+              </li>
+              <li class="nav-item ">
+                  <a class="nav-link " href="../login/index.html">Đăng nhập</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--..Nav-->
+    <div class="container p-5 " id="noneProduct" style="height: 400px;">
+      <h2 class="h2 text-center">Bạn chưa chọn sản phẩm nào !</h2>
+    </div>
+    <div class="container" id="cartPage">
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Sản phẩm</th>
+            <th scope="col">Số lượng</th>
+            <th scope="col">Đơn giá</th>
+            <th scope="col">Tổng</th>
+            <th scope="col"></th>
+
+          </tr>
+        </thead>
+        <tbody class="list-products">
+          
+          
+         
+        </tbody>
+      </table>
+      <div class="d-flex justify-content-center mb-5">
+        <table class="total-price">
+            <tr>
+              <td>Tạm tính</td>
+              <td class="total-price1">0 đ</td>
+            </tr>
+            <tr>
+              <td>Thuế</td>
+              <td class="total-price1">0 đ</td>
+            </tr>
+            <tr  >
+              <td>Tổng</td>
+              <td class="total-price1">0 đ</td>
+            </tr>
+            <tr >
+              <td class="pt-3">
+                <button
+                  type="button"
+                  class="btn btn-outline-danger px-4"
+                  onclick="BuyFunction()"
+                >
+                  Mua hàng
+                </button>
+              </td>
+            </tr>
+          </table>
+      </div>
+    </div>
+    <div class="container" id="Delivery_Information">
+        <h2 class="text-center my-3">Thông tin khách hàng</h2>
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputName">Tên đầy đủ*</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputName"
+                autocomplete="off"
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputPhone">Số điện thoại*</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="inputPhone"
+                autocomplete="off"
+              />
+              <small id="emailHelp" class="form-text text-muted"
+                >Format: xxxx-xxx-xxx</small
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputAddress">Địa chỉ*</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputAddress"
+              autocomplete="off"
+            />
+          </div>
+          
+  
+          <button type="button" class="btn btn-info mb-3" id="Submition" >
+            Gửi
+          </button>
+        </form>
+      </div>
+
+    
+    
+    
+    <footer style="background-color: black;" id="contact">
+        <div class="container ">
+            <div class=" p-5">
+                <div class="row justify-content-center mb-md-3 pb-sm-5 pb-md-0">
+                    <div class="col-md-4 text-white">
+                        <h2 class="h2 ">About Us</h2>
+                        <p>Đồ án 1 - ET3290</p>
+                    </div>
+                    <div class="col-md-4 text-white mb-3 pb-sm-5 pb-md-0">
+                        <img src="../images/logo1.png" alt="">
+                    </div>
+                    <div class="col-md-4 text-white mb-3 pb-sm-5 pb-md-0">
+                        <h2 class="h2 ">Follow me</h2>
+                        <p>HungNT182557</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+
+
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDNjuQGGVNuguG5ys_q8wqzYPxx3XKar4s",
+            authDomain: "do-an-1-41c8a.firebaseapp.com",
+            projectId: "do-an-1-41c8a",
+            storageBucket: "do-an-1-41c8a.appspot.com",
+            messagingSenderId: "385912664632",
+            appId: "1:385912664632:web:db883c9d738a3f1dd46ccd"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+    </script>
+
+
+
+
+    <script src='./main.js'></script>
+</body>
+
+</html>

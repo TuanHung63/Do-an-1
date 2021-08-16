@@ -1,0 +1,23 @@
+ .title::after{
+    content: "";
+    width: 80px;
+    height: 5px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(255, 82, 59);
+    border-radius: 5px;
+} 
+.col-md-3 img:hover {
+    transform:translateY(-5px);
+    
+
+}
+.col-md-3 img {
+    transition: transform 0.5s;
+}
+.col-md-3 {
+    cursor: pointer;
+
+}
